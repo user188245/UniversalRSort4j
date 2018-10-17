@@ -9,6 +9,9 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.user188245.util.rsort.BitExtractors;
+import com.user188245.util.rsort.RadixSorter;
+
 public class RSortTest {
 	
 	List<Integer> intList;
@@ -46,63 +49,63 @@ public class RSortTest {
 
 	@Test
 	public void intTest() {
-		List<Integer> list = RadixSorter.rsort(intList, DigitExtractors.INT);
+		List<Integer> list = RadixSorter.rsort(intList, BitExtractors.INT);
 		Collections.sort(intList);
 		assertEquals(intList,list);
 	}
 	
 	@Test
 	public void longTest() {
-		List<Long> list = RadixSorter.rsort(longList, DigitExtractors.LONG);
+		List<Long> list = RadixSorter.rsort(longList, BitExtractors.LONG);
 		Collections.sort(longList);
 		assertEquals(longList,list);
 	}
 	
 	@Test
 	public void shortTest() {
-		List<Short> list = RadixSorter.rsort(shortList, DigitExtractors.SHORT);
+		List<Short> list = RadixSorter.rsort(shortList, BitExtractors.SHORT);
 		Collections.sort(shortList);
 		assertEquals(shortList,list);
 	}
 	
 	@Test
 	public void charTest() {
-		List<Character> list = RadixSorter.rsort(charList, DigitExtractors.CHAR);
+		List<Character> list = RadixSorter.rsort(charList, BitExtractors.CHAR);
 		Collections.sort(charList);
 		assertEquals(charList,list);
 	}
 	
 	@Test
 	public void byteTest() {
-		List<Byte> list = RadixSorter.rsort(byteList, DigitExtractors.BYTE);
+		List<Byte> list = RadixSorter.rsort(byteList, BitExtractors.BYTE);
 		Collections.sort(byteList);
 		assertEquals(byteList,list);
 	}
 	
 	@Test
 	public void booleanTest() {
-		List<Boolean> list = RadixSorter.rsort(booleanList, DigitExtractors.BOOLEAN);
+		List<Boolean> list = RadixSorter.rsort(booleanList, BitExtractors.BOOLEAN);
 		Collections.sort(booleanList);
 		assertEquals(booleanList,list);
 	}
 	
 	@Test
 	public void floatTest() {
-		List<Float> list = RadixSorter.rsort(floatList, DigitExtractors.FLOAT);
+		List<Float> list = RadixSorter.rsort(floatList, BitExtractors.FLOAT);
 		Collections.sort(floatList);
 		assertEquals(floatList,list);
 	}
 	
 	@Test
 	public void doubleTest() {
-		List<Double> list = RadixSorter.rsort(doubleList, DigitExtractors.DOUBLE);
+		List<Double> list = RadixSorter.rsort(doubleList, BitExtractors.DOUBLE);
 		Collections.sort(doubleList);
 		assertEquals(doubleList,list);
 	}
 	
 	@Test
 	public void stringTest() {
-		List<String> list = RadixSorter.rtuplesort(stringList, DigitExtractors.STRING);
+		List<String> list = RadixSorter.rtuplesort(stringList, BitExtractors.STRING);
 		Collections.sort(stringList);
 		assertEquals(stringList,list);
 	}
